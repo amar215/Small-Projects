@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Kalam;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.card {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    flex: 0.5;
+    height: 80vh;
+    width: 90vw;
+    color: #fff;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.5s ease-in;
+}
+
+.card h3 {
+    font-size: 2rem;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.card.active {
+    flex: 5;
+}
+
+.card.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
